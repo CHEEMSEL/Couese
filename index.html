@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Interactive Photo Gallery — Accessible</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gallery" id="gallery">
+    <h1 id="galleryTitle">Interactive Photo Gallery</h1>
+    <p class="instructions">
+      Use mouse hover or keyboard <kbd>Tab</kbd> to focus thumbnails.
+      Press <kbd>Enter</kbd> to select. Images include descriptive alt text for accessibility.
+    </p>
+
+    <div class="viewer" role="region" aria-labelledby="galleryTitle">
+      <div class="main-view" id="mainView" aria-live="polite">
+        <img id="mainImage" src="images/lake.png"
+             alt="Mountain lake with standing rocks and cloudy sky">
+        <div class="main-caption" id="mainCaption">
+          Mountain lake with standing rocks and cloudy sky
+        </div>
+      </div>
+
+      <div class="thumbs" id="thumbs" role="list" aria-label="Image thumbnails">
+        <div class="thumb" role="listitem">
+          <img data-large="images/lake.png"
+               src="images/lake.png"
+               alt="Mountain lake with standing rocks and cloudy sky">
+          <div class="meta">Mountain Lake</div>
+        </div>
+        <div class="thumb" role="listitem">
+          <img data-large="images/pug.png"
+               src="images/pug.png"
+               alt="Puppy dog looking up with tongue out">
+          <div class="meta">Playful Puppy</div>
+        </div>
+        <div class="thumb" role="listitem">
+          <img data-large="images/river.png"
+               src="images/river.png"
+               alt="Aerial view of a winding forest road in autumn">
+          <div class="meta">Autumn Road</div>
+        </div>
+        <div class="thumb" role="listitem">
+          <img data-large="images/coast.png"
+               src="images/coast.png"
+               alt="Long exposure of ocean waves against rocks at dusk">
+          <div class="meta">Ocean Waves</div>
+        </div>
+        <div class="thumb" role="listitem">
+          <img data-large="images/sunflower.png"
+               src="images/sunflower.png""
+               alt="Close-up of a yellow sunflower in full bloom">
+          <div class="meta">Sunflower</div>
+        </div>
+        <div class="thumb" role="listitem">
+          <img data-large="images/city.png"
+               src="images/city.png"
+               alt="City skyline at night with reflections on the river">
+          <div class="meta">City Nightscape</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
